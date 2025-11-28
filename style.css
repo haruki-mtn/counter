@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/*
+基本
+================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/*
+基本
+================================================ */
+body {
+    text-align: center;
+}
+#min,
+#max,
+#input {
+    border: 1px solid #000;
+}
+#input {
+    display: block;
+    width: 50%;
+    height: 10rem;
+    margin: 0.35rem auto;
+    padding: 0.3rem 0.6rem;
+}
