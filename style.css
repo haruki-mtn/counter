@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*
 基本
 ================================================ */
@@ -36,18 +35,38 @@ img {
 /*
 基本
 ================================================ */
-body {
+.card {
+    max-width: 520px;
+    margin: 18px auto;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+h1 {
     text-align: center;
 }
 #min,
 #max,
-#input {
-    border: 1px solid #000;
+#text {
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
 }
-#input {
-    display: block;
+.limit {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+#min,
+#max {
     width: 50%;
-    height: 10rem;
+}
+#text {
+    display: block;
+    width: 100%;
+    height: 20rem;
     margin: 0.35rem auto;
     padding: 0.3rem 0.6rem;
 }

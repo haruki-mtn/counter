@@ -9,9 +9,13 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <h1 id="result">文字カウンター</h1>
-        <input id="min" type="number" placeholder="最低文字数（例: 100）" />
-        <input id="max" type="number" placeholder="最大文字数（例: 200）" />
-        <textarea id="input" type="text" placeholder="入力を開始すると文字カウントが始まります"></textarea>
+        <div class="card">
+            <h1 id="result">文字カウンター</h1>
+            <div class="limit">
+                <input id="min" type="number" placeholder="最低文字数（例: 100）" />
+                <input id="max" type="number" placeholder="最大文字数（例: 200）" />
+            </div>
+            <textarea id="text" type="text" placeholder="入力を開始すると文字カウントが始まります"></textarea>
+        </div>
     </body>
 </html>

@@ -1,19 +1,26 @@
+/*
+DOM取得
+================================================ */
 const result = document.querySelector('#result')
 const min = document.querySelector('#min')
 const max = document.querySelector('#max')
-const input = document.querySelector('#input')
-
+const text = document.querySelector('#text')
+/*
+変数定義
+================================================ */
 let minLength = null
 let maxLength = null
-
+/*
+関数定義
+================================================ */
 const getCount = () => {
     let lineBreakCnt = 0
-    for (let i = 0; i < input.value.length; i++) {
-        if (input.value[i] === '\n') {
+    for (let i = 0; i < text.value.length; i++) {
+        if (text.value[i] === '\n') {
             lineBreakCnt++
         }
     }
-    return input.value.length - lineBreakCnt
+    return text.value.length - lineBreakCnt
 }
 
 const getColor = (cnt, min, max) => {
@@ -48,20 +55,26 @@ const validateMinMax = (source) => {
     }
 }
 
-min.addEventListener('change', (e) => {
+const handleMinChange = (e) => {
     minLength = e.target.value === '' ? null : Number(e.target.value)
     validateMinMax('min')
     updateColor()
-})
+}
 
-max.addEventListener('change', (e) => {
+const handleMaxChange = (e) => {
     maxLength = e.target.value === '' ? null : Number(e.target.value)
     validateMinMax('max')
     updateColor()
-})
+}
 
-input.addEventListener('input', () => {
+const handleTextInput = () => {
     result.textContent = ``
     result.insertAdjacentHTML('beforeend', `現在 <span>${getCount()}</span> 文字`)
     updateColor()
-})
+}
+/*
+イベントリスナー
+================================================ */
+min.addEventListener('change', handleMinChange)
+max.addEventListener('change', handleMaxChange)
+text.addEventListener('input', handleTextInput)
